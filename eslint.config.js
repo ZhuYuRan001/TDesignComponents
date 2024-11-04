@@ -2,6 +2,7 @@ import eslintJs from "@eslint/js";
 import tsEslint from "typescript-eslint";
 import vueParser from "vue-eslint-parser";
 import pluginVue from "eslint-plugin-vue";
+import eslintrcImport from "./.eslintrc-auto-import.json" assert { type: "json" };
 /** @type { import("eslint").Linter.Config[] } */
 export default [
   {
@@ -20,6 +21,7 @@ export default [
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
+      ...eslintrcImport
     },
     rules: {
       //不准使用var
