@@ -1,6 +1,7 @@
 import tableProps from './props'
 import { Switch, TableProps, Table, Input, Select } from 'tdesign-vue-next'
 import axios from 'axios'
+import { defineComponent } from 'vue'
 export default defineComponent({
     name: 'BaseTable',
     props: { ...tableProps },

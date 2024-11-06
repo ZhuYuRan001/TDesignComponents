@@ -11,18 +11,18 @@ export default defineConfig({
         vue(),
         vueJsx(),
         AutoImport({
-            imports: ['vue'],
+            imports: ['vue', 'vue-router'],
             dts: 'src/auto-import/auto-imports.d.ts',
             resolvers: [
                 TDesignResolver({
                     library: 'vue-next',
                 }),
             ],
-            eslintrc: {
-                enabled: false,
-                filepath: './.eslintrc-auto-import.json',
-                globalsPropValue: true,
-            },
+            // eslintrc: {
+            //     enabled: false,
+            //     filepath: './.eslintrc-auto-import.json',
+            //     globalsPropValue: true,
+            // },
         }),
         Components({
             dirs: ['src/components'],
